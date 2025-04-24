@@ -1,0 +1,26 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>画像エディタ PoC</title>
+</head>
+<body>
+  <h1>画像アップロード＆枠付与</h1>
+  <form id="upload-form" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.original }}
+    <button type="submit">アップロード</button>
+  </form>
+
+  <canvas id="canvas" style="border:1px solid #ccc; display:block; margin-top:20px;"></canvas>
+  <button id="save-btn" style="margin-top:10px;">保存</button>
+
+  <script src="{% static 'editor/js/editor.js' %}"></script>
+  <script>
+    // CSRF トークンを JavaScript 側に渡す
+    const CSRF_TOKEN = '{{ csrf_token }}';
+  </script>
+</body>
+</html>

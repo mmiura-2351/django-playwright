@@ -1,0 +1,14 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+<head><meta charset="UTF-8"><title>画像削除</title></head>
+<body>
+  <h1>画像削除 — ID={{ image.pk }}</h1>
+  <p>本当に削除しますか？</p>
+  <form method="post">
+    {% csrf_token %}
+    <button type="submit">はい、削除する</button>
+  </form>
+  <p><a href="{% url 'image_list' %}">キャンセル</a></p>
+</body>
+</html>

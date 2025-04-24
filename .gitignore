@@ -1,0 +1,76 @@
+# Python bytecode and caches
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Virtual environments
+env/
+venv/
+ENV/
+.venv/
+
+# Django media and database files
+*.sqlite3
+/db.sqlite3
+media/
+
+# Django migrations (必要に応じて除外。初期PoC段階では管理する場合は除外しない)
+# **/migrations/
+# */migrations/*.py
+# */migrations/*.pyc
+
+# Static files (collectstatic先)
+staticfiles/
+
+# IDE / Editor settings
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# Logs and reports
+*.log
+*.out
+*.err
+
+# Coverage reports
+htmlcov/
+.coverage
+.cache/
+
+# Pytest cache
+.pytest_cache/
+
+# MyPy
+.mypy_cache/
+.dmypy.json
+
+# Profiling data
+.prof
+
+# misc
+*.sqlite3-journal
+
+# system files
+*.swp
+*~
+
+# Local environment variables
+.env
+.env.*

@@ -1,0 +1,15 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+<head><meta charset="UTF-8"><title>画像更新</title></head>
+<body>
+  <h1>画像更新 — ID={{ image.pk }}</h1>
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.original }}<br>
+    <button type="submit">更新</button>
+  </form>
+  <p><img src="{{ image.original.url }}" width="300"></p>
+  <p><a href="{% url 'image_list' %}">一覧に戻る</a></p>
+</body>
+</html>
