@@ -1,4 +1,6 @@
-# sample
+# Django-playwright
+
+created by AI
 
 ## migrate db
 
